@@ -13,8 +13,12 @@ export default function LandingPage() {
           <NavHeader />
           <div className='flex-1  p-10 grid grid-cols-2 '>
             <div className='space-y-6 flex flex-col justify-center'>
-              <div className='text-green-800 backdrop-blur-sm drop-shadow-sm p-20 bg-[rgba(133,133,135,0.1)] rounded-3xl relative inset-x-20 ml-20 space-y-8'>
+              <motion.div  
 
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+
+   className='text-green-800 backdrop-blur-sm drop-shadow-sm p-20 bg-[rgba(133,133,135,0.1)] rounded-3xl relative inset-x-20 ml-20 space-y-8'>
               <div >
                 <h1 className='text-7xl font-bold'>Planters Go</h1>
                 <h1 className='text-5xl font-semibold'>Something For Everyone</h1>
@@ -22,7 +26,7 @@ export default function LandingPage() {
               <h1 className='text-xl font-semibold text-amber-800'>Welcome to 'Planters Go' – Your green companion in the world of flora! Explore, identify, and learn about plants effortlessly with our cutting-edge AI-powered plant scanner. Discover nature like never before!</h1>
               <div className='py-2 px-4 font-bold text-xl border-2 border-blue-700 rounded-md w-fit hover:bg-amber-700 hover:border-none  hover:text-white cursor-pointer'>
                 <h1>Get Started</h1>
-              </div></div>
+              </div></motion.div>
             </div>
             <div className='flex justify-center items-center'>
               <img src='' className=' w-[35rem] bg-cover' />
@@ -53,7 +57,7 @@ Planting plants is a rewarding and eco-friendly endeavor. It contributes to clea
                 <div className='rotate-45 overflow-hidden my-8 h-32 w-32 p-4 bg-yellow-600 rounded-md -mt-[4rem]'>
                   <img src='https://cdn3d.iconscout.com/3d/premium/thumb/product-5806313-4863042.png' className='-rotate-45' />
                 </div>
-                <h1 className='font-bold font-Poppins text-3xl my-2 text-center'>Win</h1>
+                <h1 className='font-bold font-Poppins text-3xl my-2 text-center'> </h1>
                 <h1>Our Application allows you to be placed in a ranking, and also earn points depending on how rare the plants are</h1>
               </div>
 
