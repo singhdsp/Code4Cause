@@ -1,6 +1,6 @@
 import React from 'react'
 import NavHeader from '../Components/nav/NavHeader'
-
+import { motion } from 'framer-motion'
 export default function LandingPage() {
 
   return (
@@ -14,6 +14,7 @@ export default function LandingPage() {
           <div className='flex-1  p-10 grid grid-cols-2 '>
             <div className='space-y-6 flex flex-col justify-center'>
               <div className='text-green-800 backdrop-blur-sm drop-shadow-sm p-20 bg-[rgba(133,133,135,0.1)] rounded-3xl relative inset-x-20 ml-20 space-y-8'>
+
               <div >
                 <h1 className='text-7xl font-bold'>Planters Go</h1>
                 <h1 className='text-5xl font-semibold'>Something For Everyone</h1>
