@@ -174,7 +174,7 @@ function Dashboard(props) {
           <h1 className="font-bold font-ps text-white text-xl">Dashboard</h1>
           <UserAvatar name="Manit Singh" />
         </div>
-        <div className="p-8 flex-1">
+        <div className="p-8 h-full flex-1">
           <Outlet />
         </div>
       </div>
