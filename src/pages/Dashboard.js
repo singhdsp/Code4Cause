@@ -70,14 +70,23 @@ function Dashboard(props) {
     };
   }
 
+  const UserAvatar = (props) => {
+    return (
+      <div className="h-10 w-10 rounded-full bg-white font-semibold font-Ps flex justify-center items-center tracking-wider ml-auto text-sm">
+        <h1>{`${props.name.split(" ")[0][0]}${props.name.split(" ")[1][0]}`}</h1>
+      </div>
+    )
+  }
+
   const drawer = (
     <div>
       <Toolbar />
       <div className="p-4 w-full flex justify-center items-center">
-        <Avatar
+        {/*  <Avatar
           {...stringAvatar("Kent Dodds")}
           sx={{ height: 72, width: 72 }}
-        />
+        /> */}
+        <UserAvatar name=" Manit Singh" />
       </div>
       <Divider />
       <List>
@@ -115,17 +124,14 @@ function Dashboard(props) {
     <div className="h-screen w-screen flex overflow-hidden">
       <div className="h-full w-[20rem] bg-white shadow-2xl flex flex-col py-4">
         {/* Logo header */}
-        <div className=" py-8 ps-6 flex items-center">
-          <div className="p-2 text-white rounded-xl">
-            <img src="./plants-r.png " className="h-10 scale-150" />
+        <div className=" py-8 ps-2 flex items-center">
+          <div className="p-1 text-white rounded-xl">
+            <img src="/plants-r.png " className="h-16 w-16" />
           </div>
           <div className="ml-2">
-            <h1 className="uppercase text-3xl tracking-wider font-bold font-Ps">
+            <h1 className="uppercase text-3xl tracking-wider font-bold font-Ps bg-gradient-to-br from-green-600 to-blue-800 bg-clip-text text-transparent">
               Planters Go
             </h1>
-          </div>
-          <div className="ml-auto mr-2 h-10 w-10 flex justify-center items-center border-2 rounded-full border-green-600 hover:bg-green-600 hover:text-white ">
-            <KeyboardArrowLeftRounded />
           </div>
         </div>
         {/* ther Navigations */}
@@ -164,9 +170,9 @@ function Dashboard(props) {
       </div>
       {/* Main Div */}
       <div className="h-full flex-1 bg-gray-100">
-        <div className="w-full py-4 px-4 bg-green-600 flex items-center">
+        <div className="w-full py-2 px-4 bg-green-600 flex items-center">
           <h1 className="font-bold font-ps text-white text-xl">Dashboard</h1>
-          <AvatarsGLS Name="Ajay Singh" className="ml-auto" />
+          <UserAvatar name="Manit Singh" />
         </div>
         <div className="p-8 flex-1">
           <Outlet />

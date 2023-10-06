@@ -2,6 +2,7 @@ import { AddRounded } from "@mui/icons-material";
 import React, { useState, useRef } from "react";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { SHA256 } from "crypto-js";
+import sha256 from "crypto-js/sha256";
 
 const storage = getStorage();
 
@@ -12,7 +13,7 @@ export default function DefaultDash() {
   const uploadImage = (plantImageFile) => {
     let r = (Math.random() + 1).toString(36).substring(7);
     console.log(r)
-    const storageRef = ref(storage, SHA256(Date.now().toString()));
+    const storageRef = ref(storage, sha256(r).toString());
 
     uploadBytes(storageRef, plantImageFile).then((snapshot) => {
       console.log("Uploaded a blob or file!");
